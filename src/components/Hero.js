@@ -1,31 +1,5 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React from 'react';
 const Hero = () => {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0
-  });
-  const eventDate = useMemo(() => {
-    const date = new Date();
-    date.setDate(date.getDate() + 30);
-    return date;
-  }, []);
-  useEffect(() => {
-    const timer = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = eventDate.getTime() - now;
-      if (distance > 0) {
-        setTimeLeft({
-          days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-          minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-          seconds: Math.floor((distance % (1000 * 60)) / 1000)
-        });
-      }
-    }, 1000);
-    return () => clearInterval(timer);
-  }, [eventDate]);
   return (
     <section
       id="home"
@@ -86,23 +60,7 @@ const Hero = () => {
               </span>
             </button>
           </div>
-          <div className="bg-black/80 backdrop-blur-md p-10 rounded-3xl max-w-4xl mx-auto animate-slide-up shadow-2xl border border-white/30" style={{ animationDelay: '0.6s' }}>
-            <h3 className="text-white text-xl font-bold mb-8 drop-shadow-lg">Launch Offer Ends In</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {Object.entries(timeLeft).map(([unit, value]) => (
-                <div key={unit} className="text-center">
-                  <div className="bg-white/20 backdrop-blur-md rounded-2xl p-6 mb-3 border border-white/30 shadow-xl">
-                    <span className="text-4xl md:text-5xl font-bold text-white font-display drop-shadow-lg">
-                      {value.toString().padStart(2, '0')}
-                    </span>
-                  </div>
-                  <span className="text-white text-sm uppercase tracking-wider font-semibold drop-shadow-lg">
-                    {unit}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
+          {/* Countdown removed for product site */}
         </div>
       </div>
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">

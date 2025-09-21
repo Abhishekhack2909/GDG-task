@@ -164,7 +164,7 @@ const Footer = () => {
               <span>Made with ❤️ by Abhishek Tripathi • Empowering teams with automation</span>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-accent-400 rounded-full animate-pulse"></div>
-                <span>Live Event</span>
+                <span>Live Platform</span>
               </div>
             </div>
           </div>

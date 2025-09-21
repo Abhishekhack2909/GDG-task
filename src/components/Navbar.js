@@ -28,7 +28,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">DS</span>
+              <span className="text-white font-bold text-xl">AI</span>
             </div>
             <span className={`font-display font-bold text-xl ${
               scrolled ? 'text-gray-900' : 'text-white'
@@ -51,7 +51,7 @@ const Navbar = () => {
               </a>
             ))}
             <button className="btn-primary">
-              Register Now
+              Get Started
             </button>
           </div>
           <div className="md:hidden">
@@ -87,7 +87,7 @@ const Navbar = () => {
             ))}
             <div className="px-6 pt-2">
               <button className="btn-primary w-full">
-                Register Now
+                Get Started
               </button>
             </div>
           </div>

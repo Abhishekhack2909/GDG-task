@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Venue = () => {
+  // Core infrastructure feature cards
   const venueFeatures = [
     {
       icon: (
@@ -8,8 +9,8 @@ const Venue = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7l9-4 9 4-9 4-9-4zm0 6l9 4 9-4" />
         </svg>
       ),
-      title: "Multi-Region Hosting",
-      description: "Deploy automations across geo regions for latency & compliance."
+      title: 'Multi-Region Hosting',
+      description: 'Deploy automations across geo regions for latency & compliance.'
     },
     {
       icon: (
@@ -18,8 +19,8 @@ const Venue = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11c0 7-7 10-7 10S5 18 5 11a7 7 0 1114 0z" />
         </svg>
       ),
-      title: "Data Residency Controls",
-      description: "Choose where data is stored with audit trail visibility."
+      title: 'Data Residency Controls',
+      description: 'Choose where data is stored with audit trail visibility.'
     },
     {
       icon: (
@@ -27,8 +28,8 @@ const Venue = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
         </svg>
       ),
-      title: "99.99% Uptime SLA",
-      description: "Redundant infrastructure with proactive monitoring."
+      title: '99.99% Uptime SLA',
+      description: 'Redundant infrastructure with proactive monitoring.'
     },
     {
       icon: (
@@ -36,8 +37,8 @@ const Venue = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
         </svg>
       ),
-      title: "Advanced Security",
-      description: "Encryption, SSO, RBAC, secrets vault & continuous scanning."
+      title: 'Advanced Security',
+      description: 'Encryption, SSO, RBAC, secrets vault & continuous scanning.'
     }
   ];
 
@@ -175,16 +176,18 @@ const Venue = () => {
             </div>
           </div>
           <div>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3666.0234567890123!2d76.8370213!3d23.0716475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397ce9ceaaaaaaab%3A0xa224b6b82b421f83!2sVIT%20-%20%E0%A4%AD%E0%A5%8B%E0%A4%AA%E0%A4%BE%E0%A4%B2!5e0!3m2!1sen!2sin!4v1693123456789!5m2!1sen!2sin"
-              width="100%"
-              height="400"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="rounded-2xl mb-8 shadow-lg"
-            ></iframe>
+            <div className="rounded-2xl mb-8 shadow-lg bg-white p-10 border border-gray-100 flex flex-col items-center justify-center h-[400px] text-center">
+              <h4 className="font-display font-bold text-2xl text-gray-900 mb-4">Global Infrastructure</h4>
+              <p className="text-gray-600 max-w-md mx-auto mb-6">Multi-region execution nodes, latency-aware routing, and automated failover ensure your automations run reliably worldwide.</p>
+              <div className="grid grid-cols-3 gap-6 w-full max-w-xl">
+                {['NA-East','EU-West','AP-South'].map(r => (
+                  <div key={r} className="rounded-xl bg-gradient-to-br from-primary-50 to-secondary-50 border border-gray-200 p-4">
+                    <p className="text-sm font-semibold text-gray-700">{r}</p>
+                    <p className="text-xs text-gray-500 mt-1">Active</p>
+                  </div>
+                ))}
+              </div>
+            </div>
             <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100">
               <h3 className="font-display font-bold text-xl text-gray-900 mb-6">Platform Capabilities</h3>
               <div className="space-y-4">
