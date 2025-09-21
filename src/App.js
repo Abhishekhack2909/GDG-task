@@ -1,15 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import './index.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-// Components
+// Shared layout components
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+
+// Section components (used directly in home route)
 import Hero from './components/Hero';
 import About from './components/About';
 import Speakers from './components/Speakers';
 import Schedule from './components/Schedule';
 import Registration from './components/Registration';
 import Venue from './components/Venue';
-import Footer from './components/Footer';
+import Testimonials from './components/Testimonials';
+import CtaBanner from './components/CtaBanner';
+
+// Page variants mapped to provided IDs
+import Home161558 from './pages/Home161558';
+import Platform161617 from './pages/Platform161617';
+import Pricing161631 from './pages/Pricing161631';
+import Company161655 from './pages/Company161655';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -35,16 +46,35 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <Navbar />
-      <Hero />
-      <About />
-      <Speakers />
-      <Schedule />
-      <Registration />
-      <Venue />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          {/* Main landing page uses explicit sections plus new testimonial & CTA components */}
+          <Route
+            path="/"
+            element={(
+              <>
+                <Hero />
+                <About />
+                <Speakers />
+                <Schedule />
+                <Registration />
+                <Venue />
+                <Testimonials />
+                <CtaBanner />
+              </>
+            )}
+          />
+          {/* Numbered page variants */}
+          <Route path="/161558" element={<Home161558 />} />
+            <Route path="/161617" element={<Platform161617 />} />
+            <Route path="/161631" element={<Pricing161631 />} />
+            <Route path="/161655" element={<Company161655 />} />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
