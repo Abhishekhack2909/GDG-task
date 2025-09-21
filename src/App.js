@@ -39,7 +39,7 @@ function App() {
       <div className="min-h-screen bg-gradient-to-br from-primary-900 via-secondary-900 to-primary-900 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-white mx-auto mb-4"></div>
-          <h2 className="text-white text-2xl font-display font-semibold animate-pulse">Loading Epic Event...</h2>
+          <h2 className="text-white text-2xl font-display font-semibold animate-pulse">Initializing Optivize AI...</h2>
         </div>
       </div>
     );
