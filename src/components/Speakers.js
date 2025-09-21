@@ -1,6 +1,5 @@
 import React from 'react';
 const Speakers = () => {
-  // Repurposed as solution feature cards (retain image backgrounds for style)
   const speakers = [
     {
       name: "Workflow Automation",

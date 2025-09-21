@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 const Schedule = () => {
   const [activeDay, setActiveDay] = useState(0);
   const [expandedSession, setExpandedSession] = useState(null);
-  // Repurposed: treat days as pricing tiers, sessions as plan features.
   const schedule = [
     {
       day: "Starter",

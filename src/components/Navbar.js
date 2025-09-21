@@ -10,7 +10,6 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  // Updated navigation labels to match SaaS landing (text only; anchors retained to preserve layout/sections)
   const navItems = [
     { name: 'Product', href: '#home' },
     { name: 'Features', href: '#about' },

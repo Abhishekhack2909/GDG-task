@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Venue = () => {
-  // Core infrastructure feature cards
   const venueFeatures = [
     {
       icon: (

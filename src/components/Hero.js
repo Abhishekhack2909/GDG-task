@@ -60,7 +60,6 @@ const Hero = () => {
               </span>
             </button>
           </div>
-          {/* Countdown removed for product site */}
         </div>
       </div>
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
